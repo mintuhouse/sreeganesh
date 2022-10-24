@@ -1,133 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<link rel="shortcut icon" href="images/favicon.ico" />
-<meta charset="UTF-8" />
-<meta name="robots" content="index, follow" />
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<title>Sree Ganesh Constructions</title>
-<!-- ////////////////////////////////// -->
-<!-- //      Start Stylesheets       // -->
-<!-- ////////////////////////////////// -->
-<link href="styles/style.css" rel="stylesheet" type="text/css" /> 
-<link href="styles/color.css" rel="stylesheet" type="text/css" />
-<link href="styles/inn.css" rel="stylesheet" type="text/css" />
-<link href="styles/inner.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <title>Sree Ganesh Constructions</title>
+  <!-- ////////////////////////////////// -->
+  <!-- //      Start Stylesheets       // -->
+  <!-- ////////////////////////////////// -->
+  <link href="styles/style.css" rel="stylesheet" type="text/css" />
+  <link href="styles/color.css" rel="stylesheet" type="text/css" />
+  <link href="styles/inn.css" rel="stylesheet" type="text/css" />
+  <link href="styles/inner.css" rel="stylesheet" type="text/css" />
 
-<!-- ////////////////////////////////// -->
-<!-- //      Javascript Files        // -->
-<!-- ////////////////////////////////// -->
-<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
-<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+  <!-- ////////////////////////////////// -->
+  <!-- //      Javascript Files        // -->
+  <!-- ////////////////////////////////// -->
+  <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+  <script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
 
-<script type="text/javascript" src="js/superfish.js"></script> 
-<script type="text/javascript" src="js/supersubs.js"></script>
-<script type="text/javascript" src="js/jquery.twitter.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function(){
-	
-	//Menu
-	jQuery("ul.sf-menu").supersubs({ 
-	minWidth		: 12,		// requires em unit.
-	maxWidth		: 27,		// requires em unit.
-	extraWidth		: 3	// extra width can ensure lines don't sometimes turn over due to slight browser differences in how they round-off values
-						   // due to slight rounding differences and font-family 
-	}).superfish();  // call supersubs first, then superfish, so that subs are 
-					 // not display:none when measuring. Call before initialising 
-					 // containing tabs for same reason. 
-					 //jQuery tab
-	jQuery(".tab-content").hide(); //Hide all content
-	jQuery("ul.tabs li:first").addClass("active").show(); //Activate first tab
-	jQuery(".tab-content:first").show(); //Show first tab content
-	//On Click Event
-	jQuery("ul.tabs li").click(function() {
-		jQuery("ul.tabs li").removeClass("active"); //Remove any "active" class
-		jQuery(this).addClass("active"); //Add "active" class to selected tab
-		jQuery(".tab-content").hide(); //Hide all tab content
-		var activeTab = jQuery(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
-		jQuery(activeTab).fadeIn(200); //Fade in the active content
-		return false;
-	});
-					 
-	//Widget testimonial
-	jQuery('.boxslideshow').cycle({
-	timeout: 7000,  // milliseconds between slide transitions (0 to disable auto advance)
-	fx:      'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...            
-	pause:   0,	  // true to enable "pause on hover"
-	pauseOnPagerHover: 0 // true to pause when hovering over pager link
-	});
-	//jQuery toggle
-	jQuery(".toggle_container").hide();
-	jQuery("h2.trigger").click(function(){
-		jQuery(this).toggleClass("active").next().slideToggle("slow");
-	});
+  <script type="text/javascript" src="js/superfish.js"></script>
+  <script type="text/javascript" src="js/supersubs.js"></script>
+  <script type="text/javascript" src="js/jquery.twitter.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function () {
 
-	
+      //Menu
+      jQuery("ul.sf-menu").supersubs({
+        minWidth: 12,		// requires em unit.
+        maxWidth: 27,		// requires em unit.
+        extraWidth: 3	// extra width can ensure lines don't sometimes turn over due to slight browser differences in how they round-off values
+        // due to slight rounding differences and font-family 
+      }).superfish();  // call supersubs first, then superfish, so that subs are 
+      // not display:none when measuring. Call before initialising 
+      // containing tabs for same reason. 
+      //jQuery tab
+      jQuery(".tab-content").hide(); //Hide all content
+      jQuery("ul.tabs li:first").addClass("active").show(); //Activate first tab
+      jQuery(".tab-content:first").show(); //Show first tab content
+      //On Click Event
+      jQuery("ul.tabs li").click(function () {
+        jQuery("ul.tabs li").removeClass("active"); //Remove any "active" class
+        jQuery(this).addClass("active"); //Add "active" class to selected tab
+        jQuery(".tab-content").hide(); //Hide all tab content
+        var activeTab = jQuery(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+        jQuery(activeTab).fadeIn(200); //Fade in the active content
+        return false;
+      });
 
-	
-});
-</script>
+      //Widget testimonial
+      jQuery('.boxslideshow').cycle({
+        timeout: 7000,  // milliseconds between slide transitions (0 to disable auto advance)
+        fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...            
+        pause: 0,	  // true to enable "pause on hover"
+        pauseOnPagerHover: 0 // true to pause when hovering over pager link
+      });
+      //jQuery toggle
+      jQuery(".toggle_container").hide();
+      jQuery("h2.trigger").click(function () {
+        jQuery(this).toggleClass("active").next().slideToggle("slow");
+      });
+
+
+
+
+    });
+  </script>
 </head>
+
 <body>
 
-<div id="outer-container">
-	<div id="container">
-    	<div id="header">
-        	<div id="logo"><a href="index.html"><img src="images/logo-name.png" alt=""  /><span>Sree Ganesh Constructions<span></a></div><!-- end #logo -->
-            
-			<div id="nav">
-                
-                
-               <ul id="topnav" class="sf-menu">
-                     <li><a href="index.html">Home</a></li>
-                                           <li><a href="about.html">About</a>
-                    	                      	
-                    </li>
-                    
-                    <li><a href="services.html">Services</a>
-					<ul>
-                        	<li><a href="railways.html">Railways</a></li>
-                            <li><a href="roads.html">Roads</a>
-							
-							</li>
-							<li><a href="irrigation.html">Irrigation</a></li>
-							<li><a href="tunnels.html">Tunnels</a></li>
-							
-                        </ul>
-					
-					</li>
-					<li><a href="plant-machinery.html">Plant & Machinery</a>
-				
-					
-					</li>
-					<li><a href="clients.html">Clients</a></li>
-<li><a href="projects.html">Projects</a>
+  <div id="outer-container">
+    <div id="container">
+      <div id="header">
+        <div id="logo"><a href="index.html"><img src="images/logo-name.png" alt="" /><span>Sree Ganesh
+              Constructions<span></a></div><!-- end #logo -->
+
+        <div id="nav">
 
 
-</li>					
-                  
-				   <li><a href="contact-us.html">Contact</a></li>
-                    
-                </ul><!-- #topnav -->
+          <ul id="topnav" class="sf-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile">Profile</a>
+            <li><a href="about.html">About</a>
 
-        	</div><!-- #nav -->	
-        </div><!-- end #header -->
-        
-  
-        <div id="before-content" class="useimage">
-            <div class="line-shadow"></div>
-            <img src="images/header-img/page-header7.png" alt="" />    
-            
-        </div>
-        
-		<div id="content">
-        	<div id="main">
-            	<div id="maincontent" class="positionleft">
-				<h3><b>Plant & Machinery</b></h3><br><div class="magic">
-				<p>Sree Ganesh is equipped with latest and necessary plant & machinery tools to complete the construction activity. We are possessing nearly Rs. 2600 Lakhs worth of equipment for operating several projects includes highway works, irrigation projects and railway works. We are providing the details of Heavy Machinery, Vehicles and other equipment that we have.        </p><br></div>
-                
-               <div class="heads">Plants</div>
+            </li>
+
+            <li><a href="services.html">Services</a>
+              <ul>
+                <li><a href="railways.html">Railways</a></li>
+                <li><a href="roads.html">Roads</a>
+
+                </li>
+                <li><a href="irrigation.html">Irrigation</a></li>
+                <li><a href="tunnels.html">Tunnels</a></li>
+
+              </ul>
+
+            </li>
+            <li><a href="plant-machinery.html">Plant & Machinery</a>
+
+
+            </li>
+            <li><a href="clients.html">Clients</a></li>
+            <li><a href="projects.html">Projects</a>
+
+
+            </li>
+
+            <li><a href="contact-us.html">Contact</a></li>
+
+          </ul><!-- #topnav -->
+
+        </div><!-- #nav -->
+      </div><!-- end #header -->
+
+
+      <div id="before-content" class="useimage">
+        <div class="line-shadow"></div>
+        <img src="images/header-img/page-header7.png" alt="" />
+
+      </div>
+
+      <div id="content">
+        <div id="main">
+          <div id="maincontent" class="positionleft">
+            <h3><b>Equipment Strength</b></h3><br>
+            <div class="magic">
+              <p>At present the firm is having gross asset base around Rs.16 crore involving own Heavy Earth moving
+                machinery & Tippers.</p><br>
+            </div>
+
+            <!-- <div class="heads">Plants</div>
 <table width="850" border="0" cellspacing="0" cellpadding="0" class="imagetable">
   <tbody><tr>
     <td width="38" class="projectheadtext2"><div align="center">S.No.</div></td>
@@ -172,342 +179,784 @@ jQuery(document).ready(function(){
     <td bgcolor="#F6F6F6"><div align="center">1</div></td>
   </tr>
 </tbody></table>
-<br>
-<div class="heads">Machinery</div>
-<table width="850" border="0" cellspacing="0" cellpadding="0" class="imagetable">
-  <tbody><tr>
-    <td width="38" class="projectheadtext2"><div align="center">S.No.</div></td>
-    <td width="191" class="projectheadtext2"><div align="left">Type of the Machinery</div></td>
-    <td width="195" class="projectheadtext2"><div align="left">Make</div></td>
-    <td width="215" class="projectheadtext2"><div align="left">Capacity</div></td>
-    <td width="58" class="projectheadtext2"><div align="left">Qty. Nos.</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">1.</div></td>
-    <td>EXCAVATORS</td>
-    <td>a) L&amp;T KOMATSU-PC200-6<br>
-		b) L&amp;T KOMATSU-PC-300-5<br>
-		c) Tata Hitachi Ex-200</td>
-    <td>20T / Bucket Capacity 0.83 cum<br>20T/Bucket capacity 0.83 cum<br>Bucket Capacity / 0.9 cum</td>
-    <td><div align="center">06<br>
-      05<br>
-      01</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">2.</div></td>
-    <td bgcolor="#F6F6F6">SENSOR PAVER</td>
-    <td bgcolor="#F6F6F6">Apollo</td>
-    <td bgcolor="#F6F6F6">5.5 m</td>
-    <td bgcolor="#F6F6F6"><div align="center">01</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">3.</div></td>
-    <td>WHEEL LOADER</td>
-    <td>CHANGLIN_CHINA</td>
-    <td>5 Cum Front End - 19 Tons Cty</td>
-    <td><div align="center">01</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">4.</div></td>
-    <td bgcolor="#F6F6F6">TRANSIT MIXERS</td>
-    <td bgcolor="#F6F6F6">ASHOK LEYLAND</td>
-    <td bgcolor="#F6F6F6">6.5 Cum</td>
-    <td bgcolor="#F6F6F6"><div align="center">15</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">5.</div></td>
-    <td>DUMPERS &amp; TIPPERS</td>
-    <td>ASHOK LEYLAND</td>
-    <td>25 TO 28 TONNES</td>
-    <td><div align="center">25</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">6.</div></td>
-    <td bgcolor="#F6F6F6">BACK HOT LOADERS</td>
-    <td bgcolor="#F6F6F6">JCB-3DX</td>
-    <td bgcolor="#F6F6F6">3 Tons</td>
-    <td bgcolor="#F6F6F6"><div align="center">02</div></td>
-  </tr>
-  
-  <tr>
-    <td><div align="center">7.</div></td>
-    <td>HYDRA MOBILE CRANE</td>
-    <td>ESCORT EQUIP LTD</td>
-    <td>10 T Load</td>
-    <td><div align="center">02</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">8.</div></td>
-    <td bgcolor="#F6F6F6">TOWER CRANE</td>
-    <td bgcolor="#F6F6F6">ALPHA</td>
-    <td bgcolor="#F6F6F6">1 T Load</td>
-    <td bgcolor="#F6F6F6"><div align="center">02</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">9.</div></td>
-    <td>MOTOR GRADERS (SANY)</td>
-    <td>SANY-PQ190-II-540406</td>
-    <td>LONGEST BLADE + RIPPER</td>
-    <td><div align="center">02</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">10.</div></td>
-    <td bgcolor="#F6F6F6">ROLLERS  VIBRATOR<br>
-      SOILCOMAPCTOR</td>
-    <td bgcolor="#F6F6F6">VOLVO INDIA PVT LTD<br>
-      INGERSOLL RAND</td>
-    <td bgcolor="#F6F6F6">11 Tons Capacity</td>
-    <td bgcolor="#F6F6F6"><div align="center">03</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">11.</div></td>
-    <td>WATER TANKERS</td>
-    <td>ASHOK LEYLAND</td>
-    <td>12000 Ltrs</td>
-    <td><div align="center">02</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">12.</div></td>
-    <td bgcolor="#F6F6F6">CONCRETE PUMP</td>
-    <td bgcolor="#F6F6F6">GRAVES / SANY</td>
-    <td bgcolor="#F6F6F6">&nbsp;</td>
-    <td bgcolor="#F6F6F6"><div align="center">03</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">13.</div></td>
-    <td>DEWATERING PUMP</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td><div align="center">20</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">14.</div></td>
-    <td bgcolor="#F6F6F6">DIESEL TANKER</td>
-    <td bgcolor="#F6F6F6">EICHER</td>
-    <td bgcolor="#F6F6F6">5 KL Capacity</td>
-    <td bgcolor="#F6F6F6"><div align="center">01</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">15.</div></td>
-    <td>DG  SET GENERATORS</td>
-    <td>CAT</td>
-    <td>500 KVA</td>
-    <td><div align="center">01</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">16.</div></td>
-    <td bgcolor="#F6F6F6">DG SET  125 KVA</td>
-    <td bgcolor="#F6F6F6">POWERICA LTD</td>
-    <td bgcolor="#F6F6F6">125 KVA</td>
-    <td bgcolor="#F6F6F6"><div align="center">02</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">17.</div></td>
-    <td>DG SET  82.5 KVA</td>
-    <td>CUMMINS</td>
-    <td>85 KVA</td>
-    <td><div align="center">01</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">18.</div></td>
-    <td bgcolor="#F6F6F6">DG SET  30 KVA</td>
-    <td bgcolor="#F6F6F6">CUMMINS</td>
-    <td bgcolor="#F6F6F6">30 KVA</td>
-    <td bgcolor="#F6F6F6"><div align="center">03</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">19.</div></td>
-    <td>DG SET  5 KVA</td>
-    <td>KIRLOSKAR</td>
-    <td>5 KVA</td>
-    <td><div align="center">03</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">20.</div></td>
-    <td bgcolor="#F6F6F6">10 / 7 CONCRETE MIXERS</td>
-    <td bgcolor="#F6F6F6">&nbsp;</td>
-    <td bgcolor="#F6F6F6">10/7 cft</td>
-    <td bgcolor="#F6F6F6"><div align="center">05</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">21.</div></td>
-    <td>CONCRETE VIBRATORS</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td><div align="center">50</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">22.</div></td>
-    <td bgcolor="#F6F6F6">STATIC ROLLERS</td>
-    <td bgcolor="#F6F6F6">&nbsp;</td>
-    <td bgcolor="#F6F6F6">&nbsp;</td>
-    <td bgcolor="#F6F6F6"><div align="center">03</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">23.</div></td>
-    <td>DOZERS</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td><div align="center">03</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">24.</div></td>
-    <td bgcolor="#F6F6F6">LABORATORY EQUIPMENT</td>
-    <td bgcolor="#F6F6F6">FOR ROAD WORKS</td>
-    <td bgcolor="#F6F6F6">&nbsp;</td>
-    <td bgcolor="#F6F6F6"><div align="center">1 set </div></td>
-  </tr>
-  <tr>
-    <td><div align="center">25.</div></td>
-    <td>LIGHT VEHICLES</td>
-    <td>a) INNOVA<br>
-      b) INDICA<br>
-      c) BOLERO<br>
-      d) BOLERO CAMPER</td>
-    <td>&nbsp;</td>
-    <td><p align="center">01<br>
-      02<br>
-      02</p>
-      <p align="center">03</p></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">26.</div></td>
-    <td bgcolor="#F6F6F6">TRACTORS</td>
-    <td bgcolor="#F6F6F6">FARM TRACTOR<br>
-      JOHN DEERE (BULL)<br>
-      FARM (3030)</td>
-    <td bgcolor="#F6F6F6">&nbsp;</td>
-    <td bgcolor="#F6F6F6"><div align="center">02<br>
-      04<br>
-      03</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">27.</div></td>
-    <td>TANDEM ROLLERS</td>
-    <td>&nbsp;</td>
-    <td>IDD 90</td>
-    <td><div align="center">03</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">28.</div></td>
-    <td bgcolor="#F6F6F6">PNEUMATIC TYRE ROLLER</td>
-    <td bgcolor="#F6F6F6">INGERSOLL RAND</td>
-    <td bgcolor="#F6F6F6">&nbsp;</td>
-    <td bgcolor="#F6F6F6"><div align="center">01</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">29.</div></td>
-    <td>BITUMENONS SENSOR PAVER</td>
-    <td>VOGELE</td>
-    <td>&nbsp;</td>
-    <td><div align="center">01</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">30.</div></td>
-    <td bgcolor="#F6F6F6">BITUMEN BROWSERS</td>
-    <td bgcolor="#F6F6F6">ASHOK LEYLAND WITH APOLLO</td>
-    <td bgcolor="#F6F6F6">&nbsp;</td>
-    <td bgcolor="#F6F6F6"><div align="center">02</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">31.</div></td>
-    <td>TRACTOR COMPRESSOR</td>
-    <td>MAHINDRA</td>
-    <td>&nbsp;</td>
-    <td><div align="center">01</div></td>
-  </tr>
-  <tr>
-    <td bgcolor="#F6F6F6"><div align="center">32.</div></td>
-    <td bgcolor="#F6F6F6">ASPHALT CUTTING MACHINE</td>
-    <td bgcolor="#F6F6F6">&nbsp;</td>
-    <td bgcolor="#F6F6F6">&nbsp;</td>
-    <td bgcolor="#F6F6F6"><div align="center">02</div></td>
-  </tr>
-  <tr>
-    <td><div align="center">33.</div></td>
-    <td>BROOMER</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td><div align="center">01</div></td>
-  </tr>
-</tbody></table><br /><br /><br />
-				</div>
-                <div class="clear"></div><!-- clear float --> 
-            </div><!-- end #main --> 
-			
-			
-            <div class="clear"></div><!-- clear float --> 	
-		</div>
+<br> -->
 
-         <div class="after-content">
-		</div>
-		<div id="footer">
-			<div id="main-footer">
-            	<div class="footcol1">
-				<ul>
-					<li class="widget-container">
-                        <h2 class="widget-title">Who We Are</h2>
-                        <ul>
-                            
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="plant-machinery.html">Plant & Machinery</a></li>
-							<li><a href="projects.html">Projects</a></li>
-							<li><a href="#">Sitemap</a></li>
-                        </ul>
-                    </li>
+            <table width="400" border="0" cellspacing="0" cellpadding="0" class="imagetable">
+              <tbody>
+                <tr>
+                  <td width="40" class="projectheadtext2">
+                    <div align="center">S.No.</div>
+                  </td>
+                  <td width="300" class="projectheadtext2">
+                    <div align="left">Earth Movers/Machine</div>
+                  </td>
+                  <td width="60" class="projectheadtext2">
+                    <div align="left">Qty. Nos.</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">1.</div>
+                  </td>
+                  <td>Kobelco 380 Machine</td>
+                  <td>
+                    <div align="center">05</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">2.</div>
+                  </td>
+                  <td>Kobelco 350 Machine</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">3.</div>
+                  </td>
+                  <td>Kobelco 220 Machine</td>
+                  <td>
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">4.</div>
+                  </td>
+                  <td>Zaxis 370 machine</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">5.</div>
+                  </td>
+                  <td>Hyundai 210 Machine</td>
+                  <td>
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">6.</div>
+                  </td>
+                  <td>PC 200 Machine (0.9 Cum) with Rock Breakers</td>
+                  <td>
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">7.</div>
+                  </td>
+                  <td>JCB 3DX Machine</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">8.</div>
+                  </td>
+                  <td>Compactor Drum Drive</td>
+                  <td>
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">9.</div>
+                  </td>
+                  <td>Tata Hitachi Ex.70 Machine</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">10.</div>
+                  </td>
+                  <td>ZX110 Machine</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">11.</div>
+                  </td>
+                  <td>EX110</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">12.</div>
+                  </td>
+                  <td>JCB 80 Excavator</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table width="400" border="0" cellspacing="0" cellpadding="0" class="imagetable">
+              <tbody>
+                <tr>
+                  <td width="40" class="projectheadtext2">
+                    <div align="center">S.No.</div>
+                  </td>
+                  <td width="300" class="projectheadtext2">
+                    <div align="left">Vehicles/Tippers</div>
+                  </td>
+                  <td width="60" class="projectheadtext2">
+                    <div align="left">Qty. Nos.</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">13.</div>
+                  </td>
+                  <td>Bharath Benz Tippers (16 Cum )</td>
+                  <td>
+                    <div align="center">13</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">14.</div>
+                  </td>
+                  <td>Bharath Benz Tippers (18 Cum)</td>
+                  <td>
+                    <div align="center">09</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">15.</div>
+                  </td>
+                  <td>Kobelco Compressor with Drilling</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">16.</div>
+                  </td>
+                  <td>Tata Tippers (14 Cum)</td>
+                  <td>
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">17.</div>
+                  </td>
+                  <td>AMW T</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">18.</div>
+                  </td>
+                  <td>Diesel Tanker</td>
+                  <td>
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">19.</div>
+                  </td>
+                  <td>Komatsu D65 Dozer</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">20.</div>
+                  </td>
+                  <td>Crawler drill machine with compressor</td>
+                  <td>
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">21.</div>
+                  </td>
+                  <td>Mahindra Bolero Camper</td>
+                  <td>
+                    <div align="center">03</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">22.</div>
+                  </td>
+                  <td>Toyoto Fortuner</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">23.</div>
+                  </td>
+                  <td>Mahindra Scorpio</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">24.</div>
+                  </td>
+                  <td>Mahindra Imperio</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">25.</div>
+                  </td>
+                  <td>Tata Yodha</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">26.</div>
+                  </td>
+                  <td>Tractor Dozer</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">27.</div>
+                  </td>
+                  <td>Crusher @220</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">28.</div>
+                  </td>
+                  <td>Ashok Leyland UE2820 6x4 RMC </td>
+                  <td>
+                    <div align="center">05</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">29.</div>
+                  </td>
+                  <td>KYB- conmet RMC plant</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- <div class="heads">Machinery</div>
+            <table width="850" border="0" cellspacing="0" cellpadding="0" class="imagetable">
+              <tbody>
+                <tr>
+                  <td width="38" class="projectheadtext2">
+                    <div align="center">S.No.</div>
+                  </td>
+                  <td width="191" class="projectheadtext2">
+                    <div align="left">Type of the Machinery</div>
+                  </td>
+                  <td width="195" class="projectheadtext2">
+                    <div align="left">Make</div>
+                  </td>
+                  <td width="215" class="projectheadtext2">
+                    <div align="left">Capacity</div>
+                  </td>
+                  <td width="58" class="projectheadtext2">
+                    <div align="left">Qty. Nos.</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">1.</div>
+                  </td>
+                  <td>EXCAVATORS</td>
+                  <td>a) L&amp;T KOMATSU-PC200-6<br>
+                    b) L&amp;T KOMATSU-PC-300-5<br>
+                    c) Tata Hitachi Ex-200</td>
+                  <td>20T / Bucket Capacity 0.83 cum<br>20T/Bucket capacity 0.83 cum<br>Bucket Capacity / 0.9 cum</td>
+                  <td>
+                    <div align="center">06<br>
+                      05<br>
+                      01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">2.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">SENSOR PAVER</td>
+                  <td bgcolor="#F6F6F6">Apollo</td>
+                  <td bgcolor="#F6F6F6">5.5 m</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">3.</div>
+                  </td>
+                  <td>WHEEL LOADER</td>
+                  <td>CHANGLIN_CHINA</td>
+                  <td>5 Cum Front End - 19 Tons Cty</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">4.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">TRANSIT MIXERS</td>
+                  <td bgcolor="#F6F6F6">ASHOK LEYLAND</td>
+                  <td bgcolor="#F6F6F6">6.5 Cum</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">15</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">5.</div>
+                  </td>
+                  <td>DUMPERS &amp; TIPPERS</td>
+                  <td>ASHOK LEYLAND</td>
+                  <td>25 TO 28 TONNES</td>
+                  <td>
+                    <div align="center">25</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">6.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">BACK HOT LOADERS</td>
+                  <td bgcolor="#F6F6F6">JCB-3DX</td>
+                  <td bgcolor="#F6F6F6">3 Tons</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <div align="center">7.</div>
+                  </td>
+                  <td>HYDRA MOBILE CRANE</td>
+                  <td>ESCORT EQUIP LTD</td>
+                  <td>10 T Load</td>
+                  <td>
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">8.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">TOWER CRANE</td>
+                  <td bgcolor="#F6F6F6">ALPHA</td>
+                  <td bgcolor="#F6F6F6">1 T Load</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">9.</div>
+                  </td>
+                  <td>MOTOR GRADERS (SANY)</td>
+                  <td>SANY-PQ190-II-540406</td>
+                  <td>LONGEST BLADE + RIPPER</td>
+                  <td>
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">10.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">ROLLERS  VIBRATOR<br>
+                    SOILCOMAPCTOR</td>
+                  <td bgcolor="#F6F6F6">VOLVO INDIA PVT LTD<br>
+                    INGERSOLL RAND</td>
+                  <td bgcolor="#F6F6F6">11 Tons Capacity</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">03</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">11.</div>
+                  </td>
+                  <td>WATER TANKERS</td>
+                  <td>ASHOK LEYLAND</td>
+                  <td>12000 Ltrs</td>
+                  <td>
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">12.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">CONCRETE PUMP</td>
+                  <td bgcolor="#F6F6F6">GRAVES / SANY</td>
+                  <td bgcolor="#F6F6F6">&nbsp;</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">03</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">13.</div>
+                  </td>
+                  <td>DEWATERING PUMP</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>
+                    <div align="center">20</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">14.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">DIESEL TANKER</td>
+                  <td bgcolor="#F6F6F6">EICHER</td>
+                  <td bgcolor="#F6F6F6">5 KL Capacity</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">15.</div>
+                  </td>
+                  <td>DG  SET GENERATORS</td>
+                  <td>CAT</td>
+                  <td>500 KVA</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">16.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">DG SET  125 KVA</td>
+                  <td bgcolor="#F6F6F6">POWERICA LTD</td>
+                  <td bgcolor="#F6F6F6">125 KVA</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">17.</div>
+                  </td>
+                  <td>DG SET  82.5 KVA</td>
+                  <td>CUMMINS</td>
+                  <td>85 KVA</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">18.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">DG SET  30 KVA</td>
+                  <td bgcolor="#F6F6F6">CUMMINS</td>
+                  <td bgcolor="#F6F6F6">30 KVA</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">03</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">19.</div>
+                  </td>
+                  <td>DG SET  5 KVA</td>
+                  <td>KIRLOSKAR</td>
+                  <td>5 KVA</td>
+                  <td>
+                    <div align="center">03</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">20.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">10 / 7 CONCRETE MIXERS</td>
+                  <td bgcolor="#F6F6F6">&nbsp;</td>
+                  <td bgcolor="#F6F6F6">10/7 cft</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">05</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">21.</div>
+                  </td>
+                  <td>CONCRETE VIBRATORS</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>
+                    <div align="center">50</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">22.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">STATIC ROLLERS</td>
+                  <td bgcolor="#F6F6F6">&nbsp;</td>
+                  <td bgcolor="#F6F6F6">&nbsp;</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">03</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">23.</div>
+                  </td>
+                  <td>DOZERS</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>
+                    <div align="center">03</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">24.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">LABORATORY EQUIPMENT</td>
+                  <td bgcolor="#F6F6F6">FOR ROAD WORKS</td>
+                  <td bgcolor="#F6F6F6">&nbsp;</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">1 set </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">25.</div>
+                  </td>
+                  <td>LIGHT VEHICLES</td>
+                  <td>a) INNOVA<br>
+                    b) INDICA<br>
+                    c) BOLERO<br>
+                    d) BOLERO CAMPER</td>
+                  <td>&nbsp;</td>
+                  <td>
+                    <p align="center">01<br>
+                      02<br>
+                      02</p>
+                    <p align="center">03</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">26.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">TRACTORS</td>
+                  <td bgcolor="#F6F6F6">FARM TRACTOR<br>
+                    JOHN DEERE (BULL)<br>
+                    FARM (3030)</td>
+                  <td bgcolor="#F6F6F6">&nbsp;</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">02<br>
+                      04<br>
+                      03</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">27.</div>
+                  </td>
+                  <td>TANDEM ROLLERS</td>
+                  <td>&nbsp;</td>
+                  <td>IDD 90</td>
+                  <td>
+                    <div align="center">03</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">28.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">PNEUMATIC TYRE ROLLER</td>
+                  <td bgcolor="#F6F6F6">INGERSOLL RAND</td>
+                  <td bgcolor="#F6F6F6">&nbsp;</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">29.</div>
+                  </td>
+                  <td>BITUMENONS SENSOR PAVER</td>
+                  <td>VOGELE</td>
+                  <td>&nbsp;</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">30.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">BITUMEN BROWSERS</td>
+                  <td bgcolor="#F6F6F6">ASHOK LEYLAND WITH APOLLO</td>
+                  <td bgcolor="#F6F6F6">&nbsp;</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">31.</div>
+                  </td>
+                  <td>TRACTOR COMPRESSOR</td>
+                  <td>MAHINDRA</td>
+                  <td>&nbsp;</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">32.</div>
+                  </td>
+                  <td bgcolor="#F6F6F6">ASPHALT CUTTING MACHINE</td>
+                  <td bgcolor="#F6F6F6">&nbsp;</td>
+                  <td bgcolor="#F6F6F6">&nbsp;</td>
+                  <td bgcolor="#F6F6F6">
+                    <div align="center">02</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div align="center">33.</div>
+                  </td>
+                  <td>BROOMER</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>
+                    <div align="center">01</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table><br /><br /><br /> -->
+          </div>
+          <div class="clear"></div><!-- clear float -->
+        </div><!-- end #main -->
+
+
+        <div class="clear"></div><!-- clear float -->
+      </div>
+
+      <div class="after-content">
+      </div>
+      <div id="footer">
+        <div id="main-footer">
+          <div class="footcol1">
+            <ul>
+              <li class="widget-container">
+                <h2 class="widget-title">Who We Are</h2>
+                <ul>
+
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="plant-machinery.html">Plant & Machinery</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                  <li><a href="#">Sitemap</a></li>
                 </ul>
-                </div>
-            	<div class="footcol2">
-                	<ul>
-                    	<li class="widget-container">
-                        	<h2 class="widget-title">Services</h2>
-                            <ul>
-                                <li><a href="railways.html">Railways</a></li>
-                                <li><a href="roads.html">Roads</a></li>
-                                
-								<li><a href="irrigation.html">Irrigation</a></li>
-                                
-                                <li><a href="tunnels.html">Tunnels</a></li>
-                               
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            	<div class="footcol3">
-                	<ul>
-                    	<li class="widget-container">
-                        	<h2 class="widget-title">Contact Us</h2>
-                            <p>Sree Ganesh Constructions<br />
-							Flat No. 503, Block - B,<br />
-							Hima Sai Pujitha Apartments,<br />
-							Behind White House Hall, Dr's Colony,<br />
-							L.B Nagar, Hyderabad<br />
-							Telangana - 500035, India.</p>
-							<p>Tel	:	 +91 40 2403 9999<br />Fax	 :	 +91 40 2403 2799 <br />Mobile: 9849280999, 9435077294<br />Email	 :	 sgc_hyd@yahoo.com, sgc.hyd2005@gmail.com</p>
-							
-                        </li>
-                    </ul>
-                </div>
-            	<div class="footcol4">
-				<ul>
-					<li class="widget-container">
-                        <h2 class="widget-title">Map Location</h2>
-                       <iframe width="220" height="180" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?ie=UTF8&amp;cid=9101018643367821298&amp;q=Sree+Ganesh+Constructions&amp;gl=IN&amp;hl=en&amp;t=m&amp;ll=17.357336,78.543341&amp;spn=0.003686,0.004699&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.in/maps?ie=UTF8&amp;cid=9101018643367821298&amp;q=Sree+Ganesh+Constructions&amp;gl=IN&amp;hl=en&amp;t=m&amp;ll=17.357336,78.543341&amp;spn=0.003686,0.004699&amp;z=16&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
-						
-                    </li>
+              </li>
+            </ul>
+          </div>
+          <div class="footcol2">
+            <ul>
+              <li class="widget-container">
+                <h2 class="widget-title">Services</h2>
+                <ul>
+                  <li><a href="railways.html">Railways</a></li>
+                  <li><a href="roads.html">Roads</a></li>
+
+                  <li><a href="irrigation.html">Irrigation</a></li>
+
+                  <li><a href="tunnels.html">Tunnels</a></li>
+
                 </ul>
-                </div>
-                <div class="clear"></div>
-            </div><!-- end #main-footer -->
-		</div><!-- end #footer -->
-        <div id="after-footer">
-            <div id="copyright">
-            Copyright &copy;2013 <a href="http://www.sreeganesh.co.in">Sree Ganesh Constructions.</a> 
-            </div>
-            <div class="clear"></div>
+              </li>
+            </ul>
+          </div>
+          <div class="footcol3">
+            <ul>
+              <li class="widget-container">
+                <h2 class="widget-title">Contact Us</h2>
+                <p>Sree Ganesh Constructions<br />
+                  Flat No. 602, Block - B,<br />
+                  Hima Sai Pujitha Apartments,<br />
+                  Behind White House Hall, Dr's Colony,<br />
+                  L.B Nagar, Hyderabad<br />
+                  Telangana - 500035, India.</p>
+                <p>Tel : +91 40 2403 9999<br />Mobile: 9849280999<br />Email: sgc.hyd2005@gmail.com</p>
+
+              </li>
+            </ul>
+          </div>
+          <div class="footcol4">
+            <ul>
+              <li class="widget-container">
+                <h2 class="widget-title">Map Location</h2>
+                <iframe width="220" height="180" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                  src="https://maps.google.co.in/maps?ie=UTF8&amp;cid=9101018643367821298&amp;q=Sree+Ganesh+Constructions&amp;gl=IN&amp;hl=en&amp;t=m&amp;ll=17.357336,78.543341&amp;spn=0.003686,0.004699&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a
+                    href="https://maps.google.co.in/maps?ie=UTF8&amp;cid=9101018643367821298&amp;q=Sree+Ganesh+Constructions&amp;gl=IN&amp;hl=en&amp;t=m&amp;ll=17.357336,78.543341&amp;spn=0.003686,0.004699&amp;z=16&amp;iwloc=A&amp;source=embed"
+                    style="color:#0000FF;text-align:left">View Larger Map</a></small>
+
+              </li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div><!-- end #main-footer -->
+      </div><!-- end #footer -->
+      <div id="after-footer">
+        <div id="copyright">
+          Copyright &copy;2022 <a href="http://www.sreeganesh.co.in">Sree Ganesh Constructions.</a>
         </div>
-	</div><!-- end #container -->
-</div><!-- end #outer-container -->
-		
+        <div class="clear"></div>
+      </div>
+    </div><!-- end #container -->
+  </div><!-- end #outer-container -->
+
 </body>
+
 </html>
