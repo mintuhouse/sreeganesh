@@ -1,253 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<link rel="shortcut icon" href="images/favicon.ico" />
-<meta charset="UTF-8" />
-<meta name="robots" content="index, follow" />
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<title>Sree Ganesh Constructions</title>
-<!-- ////////////////////////////////// -->
-<!-- //      Start Stylesheets       // -->
-<!-- ////////////////////////////////// -->
-<link href="styles/style.css" rel="stylesheet" type="text/css" />
-<link href="styles/color.css" rel="stylesheet" type="text/css" />
-<link href="styles/inner.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="images/favicon.ico" />
+	<meta charset="UTF-8" />
+	<meta name="robots" content="index, follow" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<title>Sree Ganesh Constructions</title>
+	<!-- ////////////////////////////////// -->
+	<!-- //      Start Stylesheets       // -->
+	<!-- ////////////////////////////////// -->
+	<link href="styles/style.css" rel="stylesheet" type="text/css" />
+	<link href="styles/color.css" rel="stylesheet" type="text/css" />
+	<link href="styles/inner.css" rel="stylesheet" type="text/css" />
 
-<!-- ////////////////////////////////// -->
-<!-- //      Javascript Files        // -->
-<!-- ////////////////////////////////// -->
-<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
-<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
-<script type="text/javascript" src="js/hoverIntent.js"></script>
-<script type="text/javascript" src="js/superfish.js"></script>
-<script type="text/javascript" src="js/supersubs.js"></script>
-<script type="text/javascript" src="js/jquery.twitter.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function(){
+	<!-- ////////////////////////////////// -->
+	<!-- //      Javascript Files        // -->
+	<!-- ////////////////////////////////// -->
+	<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+	<script type="text/javascript" src="js/hoverIntent.js"></script>
+	<script type="text/javascript" src="js/superfish.js"></script>
+	<script type="text/javascript" src="js/supersubs.js"></script>
+	<script type="text/javascript" src="js/jquery.twitter.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function () {
 
-	//Menu
-	jQuery("ul.sf-menu").supersubs({
-	minWidth		: 12,		// requires em unit.
-	maxWidth		: 27,		// requires em unit.
-	extraWidth		: 3	// extra width can ensure lines don't sometimes turn over due to slight browser differences in how they round-off values
-						   // due to slight rounding differences and font-family
-	}).superfish();  // call supersubs first, then superfish, so that subs are
-					 // not display:none when measuring. Call before initialising
-					 // containing tabs for same reason.
-					 //jQuery tab
-	jQuery(".tab-content").hide(); //Hide all content
-	jQuery("ul.tabs li:first").addClass("active").show(); //Activate first tab
-	jQuery(".tab-content:first").show(); //Show first tab content
-	//On Click Event
-	jQuery("ul.tabs li").click(function() {
-		jQuery("ul.tabs li").removeClass("active"); //Remove any "active" class
-		jQuery(this).addClass("active"); //Add "active" class to selected tab
-		jQuery(".tab-content").hide(); //Hide all tab content
-		var activeTab = jQuery(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
-		jQuery(activeTab).fadeIn(200); //Fade in the active content
-		return false;
-	});
+			//Menu
+			jQuery("ul.sf-menu").supersubs({
+				minWidth: 12,		// requires em unit.
+				maxWidth: 27,		// requires em unit.
+				extraWidth: 3	// extra width can ensure lines don't sometimes turn over due to slight browser differences in how they round-off values
+				// due to slight rounding differences and font-family
+			}).superfish();  // call supersubs first, then superfish, so that subs are
+			// not display:none when measuring. Call before initialising
+			// containing tabs for same reason.
+			//jQuery tab
+			jQuery(".tab-content").hide(); //Hide all content
+			jQuery("ul.tabs li:first").addClass("active").show(); //Activate first tab
+			jQuery(".tab-content:first").show(); //Show first tab content
+			//On Click Event
+			jQuery("ul.tabs li").click(function () {
+				jQuery("ul.tabs li").removeClass("active"); //Remove any "active" class
+				jQuery(this).addClass("active"); //Add "active" class to selected tab
+				jQuery(".tab-content").hide(); //Hide all tab content
+				var activeTab = jQuery(this).find("a").attr("href"); //Find the rel attribute value to identify the active tab + content
+				jQuery(activeTab).fadeIn(200); //Fade in the active content
+				return false;
+			});
 
-	//Widget testimonial
-	jQuery('.boxslideshow').cycle({
-	timeout: 7000,  // milliseconds between slide transitions (0 to disable auto advance)
-	fx:      'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-	pause:   0,	  // true to enable "pause on hover"
-	pauseOnPagerHover: 0 // true to pause when hovering over pager link
-	});
+			//Widget testimonial
+			jQuery('.boxslideshow').cycle({
+				timeout: 7000,  // milliseconds between slide transitions (0 to disable auto advance)
+				fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+				pause: 0,	  // true to enable "pause on hover"
+				pauseOnPagerHover: 0 // true to pause when hovering over pager link
+			});
 
 
 
-});
-</script>
+		});
+	</script>
 </head>
+
 <body>
 
-<div id="outer-container">
-	<div id="container">
-    	<div id="header">
-        	<div id="logo"><a href="index.html"><img src="images/logo-name.png" alt=""  /><span>Sree Ganesh Constructions<span></a></div><!-- end #logo -->
+	<div id="outer-container">
+		<div id="container">
+			<div id="header">
+				<div id="logo"><a href="index.html"><img src="images/logo-name.png" alt="" /><span>Sree Ganesh
+							Constructions<span></a></div><!-- end #logo -->
 
-			<div id="nav">
+				<div id="nav">
 
 
-                <ul id="topnav" class="sf-menu">
-                     <li><a href="index.html">Home</a></li>
-                                           <li><a href="about.html">About</a>
+					<ul id="topnav" class="sf-menu">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a>
 
-                    </li>
+						</li>
 
-                    <li><a href="services.html">Services</a>
-					<ul>
-                        	<li><a href="railways.html">Railways</a></li>
-                            <li><a href="roads.html">Roads</a>
+						<li><a href="services.html">Services</a>
+							<ul>
+								<li><a href="railways.html">Railways</a></li>
+								<li><a href="roads.html">Roads</a>
+
+								</li>
+								<li><a href="irrigation.html">Irrigation</a></li>
+								<li><a href="tunnels.html">Tunnels</a></li>
+
+							</ul>
+
+						</li>
+						<li><a href="plant-machinery.html">Plant & Machinery</a>
+
+
+						</li>
+						<li><a href="clients.html">Clients</a></li>
+
+
+
+						<li><a href="projects.html">Projects</a>
+
+
+						</li>
+
+						<li><a href="contact-us.html">Contact</a></li>
+
+					</ul><!-- #topnav -->
+
+				</div><!-- #nav -->
+			</div><!-- end #header -->
+
+
+			<div id="before-content" class="useimage">
+				<div class="line-shadow"></div>
+				<img src="images/header-img/page-header1.jpg" alt="" />
+
+			</div>
+
+			<div id="content">
+				<div id="main">
+					<div id="maincontent" class="positionleft">
+						<div id="post-491" class="post-491 page type-page status-publish hentry">
+							<div class="entry-content">
+
+								<h1>" Knowing About us well is the foundation to any meaningful relationship "
+								</h1>
+								<hr>
+								<div class="one_third firstcols">
+									<h3><b>Who are We</b></h3>
+									<div class="magic">
+										<p><b>Sree Ganesh</b> is a high magnitude construction company with a dedicated team. Since 1997,
+											the team had completed many railway, construction, irrigation, highway and tunnel projects. The
+											main aim of our company is quality and we have high reputation with it. We organized high skilled
+											people to our esteemed clients for executing different projects. </p>
+									</div>
+								</div>
+								<div class="one_third">
+									<h3><b>Vision</b></h3>
+									<div class="magic">
+										<p><b>Sree Ganesh</b> envisions itself is an ultimate service provider which creates high value for
+											its inspired commitments. Our dedicated team is continuously making an effort to bring growth in
+											all services to achieve client goals in to reality. We venture the projects according to the
+											global standards and also we contribute our capability to the Indian economy growth. </p>
+									</div>
+								</div>
+								<div class="one_third lastcols">
+									<h3><b>Mission</b></h3>
+									<div class="magic">
+										<p><b>Sree Ganesh</b> has a very good commitment to build long-term relationship with its clients
+											based on high quality performance and client satisfaction. We deliver the committed services with
+											in time and speed of delivery is consistent in every time and also keeps their cost down. We
+											provide client satisfactory results that fits client requirements and budget. </p>
+									</div>
+								</div> <br>
+								<div class="clear">&nbsp;</div>
+
+								<div class="separator line"></div>
+							</div>
+							<p></p>
+							<h3><b>Our Team</b></h3><br>
+							<div class="one_third firstcols">
+								<div class="imgframe alignleft"><img src="images/content/1.jpg" alt="" /></div>
+								<div class="man5"><strong><b>A.Upendar Reddy</b></strong><br />
+									<p>Managing Director </p>
+								</div>
+							</div>
+							<p></p>
+							<br>
+
+							<div class="separator line"></div>
+							<p></p>
+							<h3><b>Registration</b></h3>
+							<div class="">
+								Sree Ganesh Constructions is registered as a member in following organizations
+								<ul>
+									<li>Government of Telangana Roads & Buildings Department Class-I Civil Registration No.:
+										COT/TS/FC/38/2014</li>
+									<li>An ISO 9001:2008 certified Company Certificate No.: Q9186414373</li>
+									<li>The National Small Industries Corporation Limited (NSIC) Registration No: NSIC/GP/HYD/2015/0014043
+									</li>
+									<li>MSTC Limited Buyer No. 69106</li>
+									<li>Patron Member in Builders Association of India</li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+					<div class="clear"></div><!-- clear float -->
+				</div><!-- end #main -->
+
+				<div class="clear"></div><!-- clear float -->
+			</div>
+			<br><br>
+			<div class="after-content">
+			</div>
+			<div id="footer">
+				<div id="main-footer">
+					<div class="footcol1">
+						<ul>
+							<li class="widget-container">
+								<h2 class="widget-title">Who We Are</h2>
+								<ul>
+
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="plant-machinery.html">Plant & Machinery</a></li>
+									<li><a href="projects.html">Projects</a></li>
+									<li><a href="#">Sitemap</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="footcol2">
+						<ul>
+							<li class="widget-container">
+								<h2 class="widget-title">Services</h2>
+								<ul>
+									<li><a href="railways.html">Railways</a></li>
+									<li><a href="roads.html">Roads</a></li>
+
+									<li><a href="irrigation.html">Irrigation</a></li>
+
+									<li><a href="tunnels.html">Tunnels</a></li>
+
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="footcol3">
+						<ul>
+							<li class="widget-container">
+								<h2 class="widget-title">Contact Us</h2>
+								<p>Sree Ganesh Constructions<br />
+									Flat No. 503, Block - B,<br />
+									Hima Sai Pujitha Apartments,<br />
+									Behind White House Hall, Dr's Colony,<br />
+									L.B Nagar, Hyderabad<br />
+									Telangana - 500035, India.</p>
+								<p>Tel : +91 40 2403 9999<br />Fax : +91 40 2403 2799 <br />Mobile: 9849280999, 9435077294<br />Email :
+									sgc_hyd@yahoo.com, sgc.hyd2005@gmail.com</p>
 
 							</li>
-							<li><a href="irrigation.html">Irrigation</a></li>
-							<li><a href="tunnels.html">Tunnels</a></li>
+						</ul>
+					</div>
+					<div class="footcol4">
+						<ul>
+							<li class="widget-container">
+								<h2 class="widget-title">Map Location</h2>
+								<iframe width="220" height="180" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+									src="https://maps.google.co.in/maps?ie=UTF8&amp;cid=9101018643367821298&amp;q=Sree+Ganesh+Constructions&amp;gl=IN&amp;hl=en&amp;t=m&amp;ll=17.357336,78.543341&amp;spn=0.003686,0.004699&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a
+										href="https://maps.google.co.in/maps?ie=UTF8&amp;cid=9101018643367821298&amp;q=Sree+Ganesh+Constructions&amp;gl=IN&amp;hl=en&amp;t=m&amp;ll=17.357336,78.543341&amp;spn=0.003686,0.004699&amp;z=16&amp;iwloc=A&amp;source=embed"
+										style="color:#0000FF;text-align:left">View Larger Map</a></small>
 
-                        </ul>
-
-					</li>
-					<li><a href="plant-machinery.html">Plant & Machinery</a>
-
-
-					</li>
-					<li><a href="clients.html">Clients</a></li>
-
-
-
-<li><a href="projects.html">Projects</a>
-
-
-</li>
-
-				   <li><a href="contact-us.html">Contact</a></li>
-
-                </ul><!-- #topnav -->
-
-        	</div><!-- #nav -->
-        </div><!-- end #header -->
-
-
-        <div id="before-content" class="useimage">
-            <div class="line-shadow"></div>
-            <img src="images/header-img/page-header1.jpg" alt="" />
-
-        </div>
-
-		<div id="content">
-        	<div id="main">
-			<div id="maincontent" class="positionleft">
-                        	<div id="post-491" class="post-491 page type-page status-publish hentry">
-				<div class="entry-content">
-
-                    <h1>" Knowing About us well is the foundation to any meaningful relationship "
-</h1>
-                   <hr>
-<div class="one_third firstcols">
-<h3><b>Who are We</b></h3>
-<div class="magic">
-       <p><b>Sree Ganesh</b> is a high magnitude construction company with a dedicated team. Since 1997, the team had completed many railway, construction, irrigation, highway and tunnel projects. The main aim of our company is quality and we have high reputation with it. We organized high skilled people to our esteemed clients for executing different projects. </p>
-   </div>
-   </div>
-<div class="one_third">
-<h3><b>Vision</b></h3>
-<div class="magic">
-     <p><b>Sree Ganesh</b> envisions itself is an ultimate service provider which creates high value for its inspired commitments. Our dedicated team is continuously making an effort to bring growth in all services to achieve client goals in to reality.  We venture the projects according to the global standards and also we contribute our capability to the Indian economy growth.  </p>
-   </div>
-</div>
-<div class="one_third lastcols">
-<h3><b>Mission</b></h3>
-<div class="magic">
-     <p><b>Sree Ganesh</b> has a very good commitment to build long-term relationship with its clients based on high quality performance and client satisfaction. We deliver the committed services with in time and speed of delivery is consistent in every time and also keeps their cost down. We provide client satisfactory results that fits client requirements and budget.    </p>
-   </div>
-</div>  <br>
-         <div class="clear">&nbsp;</div>
-
-		  <div class="separator line"></div>
-</div>
-<p></p>
-<h3><b>Our Team</b></h3><br>
-	<div class="one_third firstcols">
-               	  <div class="imgframe alignleft"><img src="images/content/1.jpg" alt=""/></div><div class="man5"><strong><b>A.Upendar Reddy</b></strong><br/>
-                    <p>Managing Director </p></div>
-                </div>
-									<p></p>
-									<br>
-
-	<div class="separator line"></div>
-	<p></p>
-	<h3><b>Registration</b></h3>
-	<div class="">
-		Sree Ganesh Constructions is registered as a member in following organizations
-		<ul>
-			<li>Government of Telangana Roads & Buildings Department Class-I Civil Registration No.: COT/TS/FC/38/2014</li>
-			<li>An ISO 9001:2008 certified Company Certificate No.: Q9186414373</li>
-			<li>The National Small Industries Corporation Limited (NSIC) Registration No: NSIC/GP/HYD/2015/0014043</li>
-			<li>MSTC Limited Buyer No. 69106</li>
-			<li>Patron Member in Builders Association of India</li>
-		</ul>
-  </div>
-
-</div>
-</div>
-          <div class="clear"></div><!-- clear float -->
-            </div><!-- end #main -->
-
-            <div class="clear"></div><!-- clear float -->
-		</div>
-<br><br>
-        <div class="after-content">
-		</div>
-		<div id="footer">
-			<div id="main-footer">
-            	<div class="footcol1">
-				<ul>
-					<li class="widget-container">
-                        <h2 class="widget-title">Who We Are</h2>
-                        <ul>
-
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="plant-machinery.html">Plant & Machinery</a></li>
-							<li><a href="projects.html">Projects</a></li>
-							<li><a href="#">Sitemap</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                </div>
-            	<div class="footcol2">
-                	<ul>
-                    	<li class="widget-container">
-                        	<h2 class="widget-title">Services</h2>
-                            <ul>
-                                <li><a href="railways.html">Railways</a></li>
-                                <li><a href="roads.html">Roads</a></li>
-
-								<li><a href="irrigation.html">Irrigation</a></li>
-
-                                <li><a href="tunnels.html">Tunnels</a></li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            	<div class="footcol3">
-                	<ul>
-                    	<li class="widget-container">
-                        	<h2 class="widget-title">Contact Us</h2>
-                            <p>Sree Ganesh Constructions<br />
-							Flat No. 503, Block - B,<br />
-							Hima Sai Pujitha Apartments,<br />
-							Behind White House Hall, Dr's Colony,<br />
-							L.B Nagar, Hyderabad<br />
-							Telangana - 500035, India.</p>
-							<p>Tel	:	 +91 40 2403 9999<br />Fax	 :	 +91 40 2403 2799 <br />Mobile: 9849280999, 9435077294<br />Email	 :	 sgc_hyd@yahoo.com, sgc.hyd2005@gmail.com</p>
-
-                        </li>
-                    </ul>
-                </div>
-            	<div class="footcol4">
-				<ul>
-					<li class="widget-container">
-                        <h2 class="widget-title">Map Location</h2>
-                        <iframe width="220" height="180" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?ie=UTF8&amp;cid=9101018643367821298&amp;q=Sree+Ganesh+Constructions&amp;gl=IN&amp;hl=en&amp;t=m&amp;ll=17.357336,78.543341&amp;spn=0.003686,0.004699&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe><br /><small><a href="https://maps.google.co.in/maps?ie=UTF8&amp;cid=9101018643367821298&amp;q=Sree+Ganesh+Constructions&amp;gl=IN&amp;hl=en&amp;t=m&amp;ll=17.357336,78.543341&amp;spn=0.003686,0.004699&amp;z=16&amp;iwloc=A&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
-
-                    </li>
-                </ul>
-                </div>
-                <div class="clear"></div>
-            </div><!-- end #main-footer -->
-		</div><!-- end #footer -->
-        <div id="after-footer">
-            <div id="copyright">
-            Copyright &copy;2013 <a href="http://www.sreeganesh.co.in">Sree Ganesh Constructions.</a>
-            </div>
-            <div class="clear"></div>
-        </div>
-	</div><!-- end #container -->
-</div><!-- end #outer-container -->
+							</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div><!-- end #main-footer -->
+			</div><!-- end #footer -->
+			<div id="after-footer">
+				<div id="copyright">
+					Copyright &copy;2013 <a href="http://www.sreeganesh.co.in">Sree Ganesh Constructions.</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div><!-- end #container -->
+	</div><!-- end #outer-container -->
 
 </body>
+
 </html>
